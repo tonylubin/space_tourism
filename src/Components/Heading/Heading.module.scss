@@ -1,0 +1,46 @@
+@use '../../Sass/Abstracts/' as *;
+
+.headingContainer {
+    height: 10%;
+    @include flexCenter;
+    gap: 1rem;
+    font-family: $font-barlow;
+    letter-spacing: 0.2rem;
+    
+    > p {
+        color: $pageNumber;
+        font-weight: $fw-strong;       
+    }
+    
+    > h2 {
+        font-size: 1rem;
+        font-weight: $fw-normal;
+        color: $white;
+    }
+}
+
+
+@media screen and (min-width: 768px) {
+    
+    .headingContainer {
+        padding-left: 2rem;
+        justify-content: flex-start;
+
+        > p, h2 {
+            font-size: 1.25rem;
+        }
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    
+    .headingContainer {
+        height: 12%;
+        padding-left: 7rem;
+        align-items: flex-end;
+
+        > p, h2 {
+            font-size: 1.75rem;
+        }
+    }
+}

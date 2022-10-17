@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Bellefair&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap");
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+blockquote,
+ul,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list],
+li {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+*::before,
+*::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+.headingContainer {
+  height: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  font-family: "Barlow Condensed", sans-serif;
+  letter-spacing: 0.2rem;
+}
+.headingContainer > p {
+  color: #808080;
+  font-weight: 700;
+}
+.headingContainer > h2 {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+@media screen and (min-width: 768px) {
+  .headingContainer {
+    padding-left: 2rem;
+    justify-content: flex-start;
+  }
+  .headingContainer > p, .headingContainer h2 {
+    font-size: 1.25rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .headingContainer {
+    height: 12%;
+    padding-left: 7rem;
+    align-items: flex-end;
+  }
+  .headingContainer > p, .headingContainer h2 {
+    font-size: 1.75rem;
+  }
+}/*# sourceMappingURL=Heading.module.css.map */

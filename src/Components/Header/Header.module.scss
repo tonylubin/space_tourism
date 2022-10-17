@@ -1,0 +1,59 @@
+@use "../../Sass/Abstracts/" as *;
+
+header {
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 2rem 0 2rem;
+}
+
+
+@media screen and (min-width: 768px) {
+
+    header {
+        padding: 0;
+    }
+
+    .burgerMenu {
+        display: none;
+    }  
+    
+    .menu {
+        height: 100%;
+    }
+
+    .logo {
+        padding: 2rem
+    }
+}
+
+@media screen and (min-width: 1280px) {
+
+    header {
+        padding-left: 2rem;
+    }
+    
+    .line {
+        @include flexCenter;
+        flex-grow: 3;
+        position: relative;
+
+        > span {
+            display: inline-block;
+            width: 100%;
+            border-bottom: 1px solid rgba($color: $white, $alpha: 0.25);
+            position: absolute;
+            left: 2rem;
+            z-index: 1;
+        }
+    }
+
+    .menu {
+        flex-grow: 1;
+    }
+
+    .logo {
+        padding: 0;
+    }
+}

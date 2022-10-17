@@ -1,0 +1,163 @@
+@use "../../Sass/Abstracts/" as *;
+
+//Destination page
+
+.navContainer-destinationsLinks {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.destinationsLinks {
+  font-family: $font-barlow;
+
+  &__activated {
+    color: $white;
+    text-decoration: underline;
+    text-underline-offset: 0.5rem;
+  }
+
+  &__inactivated {
+    color: $light-blue;
+
+    &:hover {
+      text-decoration-color: rgba($color: $white, $alpha: 0.5);
+      text-decoration: underline;
+      text-underline-offset: 0.5rem;
+    }
+  }
+}
+
+// Technology page
+
+.navContainer-technologyLinks {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 3rem 0 2rem 0;
+}
+
+.technologyLinks {
+  @include flexCenter;
+  font-family: $font-bellefair;
+  border-radius: 50%;
+  font-size: $sm-techLink;
+
+  &__inactivated {
+    border: 1px solid $link-circle;
+
+    @include circle-link(2.5rem, 2.5rem);
+    color: $white;
+
+    &:hover {
+      border-color: $white;
+    }
+  }
+
+  &__activated {
+    @include circle-link(2.5rem, 2.5rem);
+    background-color: $white;
+    color: $black;
+  }
+}
+
+//Crew page
+.navContainer-crewLinks {
+  @include flexCenter;
+  gap: 1rem;
+  padding: 2.5rem 0;
+}
+
+.crewLinks {
+  
+  display: flex;
+  width: 0.8rem;
+  height: 0.8rem;
+
+  &__inactivated {
+    background-color: rgba($color: $white, $alpha: 0.17);
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+
+    &:hover {
+        background-color: rgba($color: $white, $alpha: 0.5);
+    }
+  }
+
+  &__activated {
+    background-color: $white;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+  }
+}
+
+
+@media screen and (min-width: 768px) {
+
+  // Destination page
+  .destinationsLinks {
+    letter-spacing: 0.17rem;
+  }
+
+  // Technology page
+  .navContainer-technologyLinks {
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+  }
+
+  .technologyLinks {
+    font-size: $md-techLink;
+
+    &__activated {
+      @include circle-link(3.75rem, 3.75rem);
+    }
+
+    &__inactivated {
+      @include circle-link(3.75rem, 3.75rem);
+    }
+  }
+
+  // Crew page
+  .navContainer-crewLinks {
+    padding: 2.5rem 0 0 0;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+
+  // crew page
+  .navContainer-crewLinks {
+    flex-grow: 1;
+  }
+
+  .crewLinks {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  // technology page
+
+  .navContainer-technologyLinks {
+    gap: 0;
+    padding: 0;
+    flex-direction: column;
+    justify-content: space-between;
+    grid-area: 1 / 1 / 4 / 2;
+  }
+
+  .technologyLinks {
+    font-size: $lg-techLink;
+
+    &__activated {
+      @include circle-link(5rem, 5rem);
+    }
+
+    &__inactivated {
+      @include circle-link(5rem, 5rem);
+    }
+  }
+
+}

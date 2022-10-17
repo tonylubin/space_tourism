@@ -1,0 +1,35 @@
+@use 'variables' as *;
+
+@mixin backgroundImage($url) {
+    background-image: url($url);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+
+@mixin flexCenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin primaryText {
+    font-family: $font-bellefair;
+    font-weight: 400;
+    color: $white;
+}
+
+@mixin secondaryText {
+    font-family: $font-barlow;
+    font-weight: 400;
+    color: $light-blue;
+}
+
+@mixin circle-link($width, $height) {
+    width: $width;
+    height: $height;
+    line-height: $height;
+    border-radius: 50%;
+    text-align: center;
+}

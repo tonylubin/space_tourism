@@ -1,0 +1,24 @@
+@use '../../Sass/Abstracts/' as *;
+
+.pageLayout {
+    @include backgroundImage('../../assets/destination/background-destination-mobile.jpg');
+}
+
+.imgContainer {
+    height: 10rem;
+    width: 10rem;
+}
+
+
+@media screen and (min-width: 768px) {
+    
+    .pageLayout {
+        @include backgroundImage("../../assets/destination/background-destination-tablet.jpg");
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .pageLayout {
+        padding-top: 2rem;   
+    }
+}

@@ -1,0 +1,90 @@
+@use "../../Sass/Abstracts/" as *;
+
+.homePage {
+  @include backgroundImage("../../assets/home/background-home-mobile.jpg");
+
+  main {
+    > p {
+      @include secondaryText;
+      text-align: center;
+      padding: 0 1.5rem;
+      font-size: $sm-bodyText;
+    }
+  }
+
+  .circle {
+    @include flexCenter;
+    background-color: $white;
+    font-family: $font-bellefair;
+    color: $black;
+    border: 0;
+    border-radius: 50%;
+    height: 10rem;
+    width: 10rem;
+    letter-spacing: 0.1rem;
+    margin: 10rem auto 0 auto;
+    font-size: $sm-homeBtn;
+  }
+
+  .circleHover {
+    outline: 4rem solid rgba($color: $white, $alpha: 0.1);
+    cursor: pointer;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .homePage {
+    @include backgroundImage("../../assets/home/background-home-tablet.jpg");
+
+    main {
+      width: min-content;
+      margin: 5rem auto 0 auto;
+
+      > p {
+        line-height: 1.75rem;
+        font-size: $md-bodyText;
+      }
+    }
+
+    .circle {
+      width: 15rem;
+      height: 15rem;
+      margin: 8rem auto 0 auto;
+      letter-spacing: 0.125rem;
+      font-size: $md-homeBtn;
+    }
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .homePage {
+    @include backgroundImage("../../assets/home/background-home-desktop.jpg");
+    padding-top: 2rem;
+
+    &__subSection {
+
+      height: 75%;
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      align-items: flex-end;
+
+      > main {
+        padding-left: 8rem;
+        margin: 0;
+
+        > p {
+          font-size: $lg-bodyText;
+          text-align: left;
+          padding: 0;
+          line-height: 2rem;
+        }
+
+      }
+
+      .circle {
+        margin: 0 0 0 2rem;
+      }
+      
+    }
+  }
+}

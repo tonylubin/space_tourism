@@ -1,0 +1,205 @@
+@import url("https://fonts.googleapis.com/css2?family=Bellefair&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap");
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+blockquote,
+ul,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list],
+li {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+*::before,
+*::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+.mainContainer {
+  height: 80%;
+}
+.mainContainer__infoHolder {
+  height: 75%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.mainContainer__infoHolder .infoContainer > h3 {
+  font-family: "Bellefair", serif;
+  color: #ffffff;
+  font-size: 3.5rem;
+  font-weight: 400;
+  text-align: center;
+}
+.mainContainer__infoHolder .infoContainer > .mainInfo {
+  font-family: "Barlow Condensed", sans-serif;
+  color: #d0d6f9;
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+}
+.mainContainer__infoHolder__div {
+  width: 80%;
+  margin: 0 auto;
+  border-top: 1px solid #383B4B;
+}
+.mainContainer__infoHolder__div .subHeadingHolder {
+  text-align: center;
+}
+.mainContainer__infoHolder__div .subHeadingHolder .subHeading {
+  font-family: "Barlow Condensed", sans-serif;
+  color: #d0d6f9;
+  letter-spacing: 0.15rem;
+}
+.mainContainer__infoHolder__div .subHeadingHolder .data {
+  font-family: "Bellefair", serif;
+  color: #ffffff;
+  font-size: 1.8rem;
+}
+.mainContainer__infoHolder__div #sub1 {
+  padding-top: 1.5rem;
+}
+.mainContainer__infoHolder__div #sub2 {
+  padding-top: 2rem;
+}
+.mainContainer__imgHolder {
+  height: 25%;
+}
+.mainContainer__imgHolder__container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .mainContainer__imgHolder {
+    height: 35%;
+  }
+  .mainContainer__imgHolder__container > img {
+    height: 100%;
+  }
+  .mainContainer__infoHolder {
+    height: 65%;
+  }
+  .mainContainer__infoHolder__div1 {
+    width: 70%;
+    padding-top: 1.5rem;
+  }
+  .mainContainer__infoHolder__div1 > h3 {
+    font-size: 5rem;
+  }
+  .mainContainer__infoHolder__div1 > .mainInfo {
+    line-height: 1.75rem;
+  }
+  .mainContainer__infoHolder__div2 {
+    display: flex;
+    justify-content: space-evenly;
+    width: 70%;
+    margin-top: 3rem;
+  }
+  .mainContainer #sub1,
+.mainContainer #sub2 {
+    padding: 2rem 0 1rem 0;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .mainContainer {
+    height: 70%;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    align-items: end;
+  }
+  .mainContainer__imgHolder {
+    height: 70%;
+  }
+  .mainContainer__infoHolder {
+    height: 80%;
+    align-items: start;
+    justify-content: space-between;
+  }
+  .mainContainer__infoHolder .infoContainer > h3 {
+    font-size: 6.25rem;
+    color: #ffffff;
+    text-align: left;
+  }
+  .mainContainer__infoHolder .infoContainer .mainInfo {
+    font-size: 1.125rem;
+    color: #d0d6f9;
+    text-align: left;
+    margin: 0;
+    line-height: 2rem;
+  }
+  .mainContainer__infoHolder__div {
+    margin: 0;
+    display: flex;
+    gap: 5rem;
+  }
+  .mainContainer__infoHolder__div .subHeadingHolder {
+    text-align: left;
+  }
+}/*# sourceMappingURL=Destination.module.css.map */

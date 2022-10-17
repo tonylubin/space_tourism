@@ -1,0 +1,44 @@
+@use "../../Sass/Abstracts/" as *;
+
+.title {
+  text-align: center;
+  margin: 2rem auto;
+
+  > p {
+    @include secondaryText;
+    letter-spacing: 0.2rem;   
+    font-size: $sm-homeIntro;
+  }
+
+  > h1 {
+    @include primaryText;
+    font-size: $sm-homeHeading;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .title {
+    margin: 0;
+
+    > h1 {
+      font-size: $md-homeHeading;
+    }
+
+    > p {
+      font-size: $md-homeIntro;
+    }
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .title {
+    > p {
+      font-size: $lg-homeIntro;
+      text-align: left;
+    }
+
+    > h1 {
+      text-align: left;
+    }
+  }
+}

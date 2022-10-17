@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Bellefair&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap");
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+blockquote,
+ul,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list],
+li {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+*::before,
+*::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+.homePage {
+  background-image: url("../../assets/home/background-home-mobile.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+}
+.homePage main > p {
+  font-family: "Barlow Condensed", sans-serif;
+  color: #d0d6f9;
+  text-align: center;
+  padding: 0 1.5rem;
+}
+.homePage .circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  font-family: "Bellefair", serif;
+  color: #0b0d17;
+  border: 0;
+  border-radius: 50%;
+  height: 10rem;
+  width: 10rem;
+  letter-spacing: 0.1rem;
+  margin: 10rem auto 0 auto;
+}
+.homePage .circleHover {
+  outline: 4rem solid rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  .homePage {
+    background-image: url("../../assets/home/background-home-tablet.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+  }
+  .homePage main {
+    width: -webkit-min-content;
+    width: -moz-min-content;
+    width: min-content;
+    margin: 5rem auto 0 auto;
+  }
+  .homePage main > p {
+    line-height: 1.75rem;
+  }
+  .homePage .circle {
+    width: 15rem;
+    height: 15rem;
+    margin: 8rem auto 0 auto;
+    letter-spacing: 0.125rem;
+    font-size: 2rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .homePage {
+    background-image: url("../../assets/home/background-home-desktop.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    padding-top: 2rem;
+  }
+  .homePage__subSection {
+    height: 75%;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: flex-end;
+  }
+  .homePage__subSection > main {
+    padding-left: 8rem;
+    margin: 0;
+  }
+  .homePage__subSection > main > p {
+    font-size: 1.125rem;
+    text-align: left;
+    padding: 0;
+    line-height: 2rem;
+  }
+  .homePage__subSection .circle {
+    margin: 0 0 0 2rem;
+  }
+}/*# sourceMappingURL=Home.module.css.map */

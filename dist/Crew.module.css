@@ -1,0 +1,196 @@
+@import url("https://fonts.googleapis.com/css2?family=Bellefair&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap");
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+blockquote,
+ul,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list],
+li {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+*::before,
+*::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+.mainContainer {
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.mainContainer__imgSection {
+  height: 40%;
+  width: calc(100% - 4rem);
+  display: flex;
+  justify-content: center;
+  border-bottom: 2px solid #383B4B;
+}
+.mainContainer__imgSection__imgContainer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding-top: 1rem;
+}
+.mainContainer__imgSection__imgContainer__imgContainer, .mainContainer__imgSection__imgContainer img {
+  height: 100%;
+}
+.mainContainer__infoSection {
+  height: 60%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.mainContainer__infoSection__bio {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 400;
+  color: #d0d6f9;
+  text-align: center;
+  padding: 1.5rem 2.5rem 0 2.5rem;
+}
+.mainContainer__infoSection__crewMember {
+  font-family: "Bellefair", serif;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 1.5rem;
+  padding-top: 0.5rem;
+}
+.mainContainer__infoSection > h3 {
+  font-family: "Bellefair", serif;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.49);
+}
+
+@media screen and (min-width: 768px) {
+  .mainContainer__imgSection {
+    order: 5;
+    border-bottom: none;
+    height: 70%;
+    width: 100%;
+  }
+  .mainContainer__imgSection__imgContainer {
+    padding-top: 4rem;
+  }
+  .mainContainer__infoSection {
+    height: 30%;
+    justify-content: center;
+  }
+  .mainContainer__infoSection__crewMember {
+    order: 2;
+    font-size: 2.5rem;
+    padding: 0;
+  }
+  .mainContainer__infoSection__bio {
+    order: 3;
+    line-height: 1.75rem;
+    width: 70%;
+    padding: 0.5rem 0 0 0;
+  }
+  .mainContainer__infoSection > h3 {
+    order: 1;
+    font-size: 1.5rem;
+  }
+  .mainContainer__infoSection > ul {
+    order: 4;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .mainContainer {
+    height: 78%;
+    width: calc(100% - 14rem);
+    margin: 0 auto;
+    flex-direction: row;
+    align-items: flex-end;
+  }
+  .mainContainer__imgSection {
+    width: auto;
+    height: 100%;
+    padding: 0;
+  }
+  .mainContainer__imgSection__imgContainer {
+    padding: 0;
+    justify-content: flex-end;
+  }
+  .mainContainer__infoSection {
+    width: 60%;
+    height: 70%;
+    align-items: flex-start;
+  }
+  .mainContainer__infoSection__crewMember {
+    font-size: 3.5rem;
+  }
+  .mainContainer__infoSection__bio {
+    font-size: 1.125rem;
+    text-align: left;
+    padding: 0;
+  }
+  .mainContainer__infoSection > h3 {
+    font-size: 2rem;
+  }
+}/*# sourceMappingURL=Crew.module.css.map */

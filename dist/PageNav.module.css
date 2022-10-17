@@ -1,0 +1,232 @@
+@import url("https://fonts.googleapis.com/css2?family=Bellefair&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap");
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+blockquote,
+ul,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list],
+li {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+*::before,
+*::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+.navContainer-destinationsLinks {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.destinationsLinks {
+  font-family: "Barlow Condensed", sans-serif;
+}
+.destinationsLinks__activated {
+  color: #ffffff;
+  text-decoration: underline;
+  text-underline-offset: 0.5rem;
+}
+.destinationsLinks__inactivated {
+  color: #d0d6f9;
+}
+.destinationsLinks__inactivated:hover {
+  -webkit-text-decoration-color: rgba(255, 255, 255, 0.5);
+          text-decoration-color: rgba(255, 255, 255, 0.5);
+  text-decoration: underline;
+  text-underline-offset: 0.5rem;
+}
+
+.navContainer-technologyLinks {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 3rem 0 2rem 0;
+}
+
+.technologyLinks {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Bellefair", serif;
+  border-radius: 50%;
+}
+.technologyLinks__inactivated {
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  width: 2.5rem;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  border-radius: 50%;
+  text-align: center;
+  color: #ffffff;
+}
+.technologyLinks__inactivated:hover {
+  border-color: #ffffff;
+}
+.technologyLinks__activated {
+  width: 2.5rem;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  border-radius: 50%;
+  text-align: center;
+  background-color: #ffffff;
+  color: #0b0d17;
+}
+
+.navContainer-crewLinks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 2.5rem 0;
+}
+
+.crewLinks {
+  display: flex;
+  width: 0.8rem;
+  height: 0.8rem;
+}
+.crewLinks__inactivated {
+  background-color: rgba(255, 255, 255, 0.17);
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+}
+.crewLinks__inactivated:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.crewLinks__activated {
+  background-color: #ffffff;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+}
+
+@media screen and (min-width: 768px) {
+  .destinationsLinks {
+    letter-spacing: 0.17rem;
+  }
+  .navContainer-technologyLinks {
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+  }
+  .technologyLinks {
+    font-size: 1.5rem;
+  }
+  .technologyLinks__activated {
+    width: 3.75rem;
+    height: 3.75rem;
+    line-height: 3.75rem;
+    border-radius: 50%;
+    text-align: center;
+  }
+  .technologyLinks__inactivated {
+    width: 3.75rem;
+    height: 3.75rem;
+    line-height: 3.75rem;
+    border-radius: 50%;
+    text-align: center;
+  }
+  .navContainer-crewLinks {
+    padding: 2.5rem 0 0 0;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .navContainer-crewLinks {
+    flex-grow: 1;
+  }
+  .crewLinks {
+    width: 1rem;
+    height: 1rem;
+  }
+  .navContainer-technologyLinks {
+    gap: 0;
+    padding: 0;
+    flex-direction: column;
+    justify-content: space-between;
+    grid-area: 1/1/4/2;
+  }
+  .technologyLinks {
+    font-size: 2rem;
+  }
+  .technologyLinks__activated {
+    width: 5rem;
+    height: 5rem;
+    line-height: 5rem;
+    border-radius: 50%;
+    text-align: center;
+  }
+  .technologyLinks__inactivated {
+    width: 5rem;
+    height: 5rem;
+    line-height: 5rem;
+    border-radius: 50%;
+    text-align: center;
+  }
+}/*# sourceMappingURL=PageNav.module.css.map */
