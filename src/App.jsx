@@ -16,7 +16,7 @@ function App() {
     <div className="App">
       <MenuContextStatus.Provider value={[ isOpen, setIsOpen ]}>
         <Routes>
-          <Route path="/" element={<Navigate replace to="/home" />} />
+          <Route path="/space_tourism" element={<Navigate replace to="/home" />} />
           <Route path="/home" element={<Home />} />
           <Route path="/destinations/*" element={<DestinationPageRoutes />} />
           <Route path="/crew/*" element={<CrewPageRoutes />} />
