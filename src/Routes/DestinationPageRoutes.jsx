@@ -15,6 +15,7 @@ const DestinationPageRoutes = () => {
                     info={dest.description}
                     time={dest.travel}
                     distance={dest.distance}
+                    img={dest.images.png}
                 />
             }
         />

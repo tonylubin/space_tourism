@@ -1,23 +1,13 @@
 import PageNav from "../../Components/PageNav/PageNav";
 import styles from "./Crew.module.scss";
-import DH from "../../assets/crew/image-douglas-hurley.png";
-import MS from "../../assets/crew/image-mark-shuttleworth.png";
-import VG from "../../assets/crew/image-victor-glover.png";
-import AA from "../../assets/crew/image-anousheh-ansari.png";
 
-const img = {
-  "Douglas Hurley": DH,
-  "Mark Shuttleworth": MS,
-  "Victor Glover": VG,
-  "Anousheh Ansari": AA,
-};
 
 const Crew = (props) => {
   return (
     <main className={styles.mainContainer}>
       <div className={styles.mainContainer__imgSection}>
         <div className={styles.mainContainer__imgSection__imgContainer}>
-          <img src={img[props.name]} alt="crew member" />
+          <img src={require(`../../assets/${props.img}`)} alt="crew member" />
         </div>
       </div>
       <div className={styles.mainContainer__infoSection}>

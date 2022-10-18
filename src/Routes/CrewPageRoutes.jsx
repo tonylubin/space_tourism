@@ -14,6 +14,7 @@ const CrewPageRoutes = () => {
                         role={member.role}
                         name={member.name}
                         bio={member.bio}
+                        img={member.images.png}
                     />
                 }
                 path={member.name.replace(" ", "").toLowerCase()}

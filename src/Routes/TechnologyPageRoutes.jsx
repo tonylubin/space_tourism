@@ -11,6 +11,8 @@ const TechnologyPageRoutes = () => {
         <Technology
           description={tech.description}
           title={tech.name}
+          imgPortrait={tech.images.portrait}
+          imgLandscape={tech.images.landscape}
         />
       }
       path={tech.name.replace(" ", "").toLowerCase()}
