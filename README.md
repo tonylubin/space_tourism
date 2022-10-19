@@ -43,7 +43,7 @@ Users should be able to:
 ### Built with
 
 - Semantic HTML5 markup
-- SCSS with BEM & CSS Modules
+- SCSS with use of `@mixins` along with CSS Modules & BEM practice
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
