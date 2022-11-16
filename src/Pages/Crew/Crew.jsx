@@ -9,9 +9,7 @@ const Crew = (props) => {
   return (
     <main className={styles.mainContainer}>
       <div className={styles.mainContainer__imgSection}>
-        <div className={styles.mainContainer__imgSection__imgContainer}>
           <img src={require(`../../assets/${img}`)} alt="crew member" />
-        </div>
       </div>
       <div className={styles.mainContainer__infoSection}>
         <PageNav pageName="crew" />

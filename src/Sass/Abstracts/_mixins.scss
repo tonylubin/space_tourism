@@ -5,7 +5,6 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100%;
 }
 
 @mixin flexCenter {
@@ -32,4 +31,15 @@
     line-height: $height;
     border-radius: 50%;
     text-align: center;
+}
+
+@mixin gridLayout {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 10vh 10vh minmax(auto, 80vh);
+}
+
+@mixin btnSize($h, $w) {
+    height: $h;
+    width: $w;
 }

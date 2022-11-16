@@ -2,6 +2,7 @@
 
 .pageLayout {
     @include backgroundImage("../../assets/crew/background-crew-mobile.jpg");
+    @include gridLayout;
 }
 
 @media screen and (min-width: 768px) {
@@ -15,6 +16,6 @@
 
     .pageLayout {
         @include backgroundImage("../../assets/crew/background-crew-desktop.jpg");
-        padding-top: 2rem;
+        grid-template-rows: 15vh 12vh 73vh;
     }
 }

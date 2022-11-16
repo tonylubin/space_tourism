@@ -2,11 +2,8 @@
 
 .pageLayout {
     @include backgroundImage('../../assets/destination/background-destination-mobile.jpg');
-}
-
-.imgContainer {
-    height: 10rem;
-    width: 10rem;
+    @include gridLayout;
+    height: 100%;
 }
 
 
@@ -19,6 +16,6 @@
 
 @media screen and (min-width: 1280px) {
     .pageLayout {
-        padding-top: 2rem;   
+        grid-template-rows: 15vh 12vh 73vh;   
     }
 }

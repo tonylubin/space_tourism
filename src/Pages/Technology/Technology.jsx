@@ -32,7 +32,6 @@ const Technology = (props) => {
   return (
     <main className={styles.mainContainer}>
       <div className={styles.mainContainer__imgHolder}>
-        <div className={styles.imgBox}>
           {/* <img src={isDesktopSize
                 ? img.portrait[props.title]
                 : img.landscape[props.title]
@@ -44,7 +43,6 @@ const Technology = (props) => {
             : require(`../../assets/${imgLandscape}`)
           }
           alt="tech item"/>
-        </div>
       </div>
       <div className={styles.mainContainer__infoHolder}>
           <PageNav pageName="technology" />

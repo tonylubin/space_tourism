@@ -1,7 +1,7 @@
 @use '../../Sass/Abstracts/' as *;
 
 .headingContainer {
-    height: 10%;
+    height: 100%;
     @include flexCenter;
     gap: 1rem;
     font-family: $font-barlow;
@@ -35,7 +35,6 @@
 @media screen and (min-width: 1280px) {
     
     .headingContainer {
-        height: 12%;
         padding-left: 7rem;
         align-items: flex-end;
 

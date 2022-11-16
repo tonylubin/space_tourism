@@ -1,7 +1,7 @@
 @use "../../Sass/Abstracts/" as *;
 
 header {
-    height: 10%;
+    height: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -31,7 +31,7 @@ header {
 @media screen and (min-width: 1280px) {
 
     header {
-        padding-left: 2rem;
+        padding: 2rem 0 0 2rem;
     }
     
     .line {

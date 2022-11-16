@@ -2,33 +2,47 @@
 
 .homePage {
   @include backgroundImage("../../assets/home/background-home-mobile.jpg");
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 10vh 90vh;
 
-  main {
-    > p {
-      @include secondaryText;
-      text-align: center;
-      padding: 0 1.5rem;
-      font-size: $sm-bodyText;
+  &__subSection {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 60% 40%;
+    justify-items: center;
+
+    main {
+      > p {
+        @include secondaryText;
+        text-align: center;
+        padding: 1rem 1.5rem 0 1.5rem;
+        font-size: $sm-bodyText;
+      }
     }
-  }
 
-  .circle {
-    @include flexCenter;
-    background-color: $white;
-    font-family: $font-bellefair;
-    color: $black;
-    border: 0;
-    border-radius: 50%;
-    height: 10rem;
-    width: 10rem;
-    letter-spacing: 0.1rem;
-    margin: 10rem auto 0 auto;
-    font-size: $sm-homeBtn;
-  }
-
-  .circleHover {
-    outline: 4rem solid rgba($color: $white, $alpha: 0.1);
-    cursor: pointer;
+    .btnHolder {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      
+      .circle {
+        @include flexCenter;
+        @include btnSize(10rem, 10rem);
+        background-color: $white;
+        font-family: $font-bellefair;
+        color: $black;
+        border: 0;
+        border-radius: 50%;
+        letter-spacing: 0.1rem;
+        font-size: $sm-homeBtn;
+      }
+    
+      .circleHover {
+        outline: 4rem solid rgba($color: $white, $alpha: 0.1);
+        cursor: pointer;
+      }
+    }    
   }
 }
 
@@ -36,22 +50,27 @@
   .homePage {
     @include backgroundImage("../../assets/home/background-home-tablet.jpg");
 
-    main {
-      width: min-content;
-      margin: 5rem auto 0 auto;
+    &__subSection {
 
-      > p {
-        line-height: 1.75rem;
-        font-size: $md-bodyText;
+      main {
+        width: min-content;
+  
+        > p {
+          line-height: 1.75rem;
+          font-size: $md-bodyText;
+        }
       }
-    }
-
-    .circle {
-      width: 15rem;
-      height: 15rem;
-      margin: 8rem auto 0 auto;
-      letter-spacing: 0.125rem;
-      font-size: $md-homeBtn;
+      
+      .btnHolder {
+        
+        .circle {
+          @include btnSize(15rem, 15rem);
+          
+    
+          letter-spacing: 0.125rem;
+          font-size: $md-homeBtn;
+        }
+      }
     }
   }
 }
@@ -59,18 +78,20 @@
 @media screen and (min-width: 1280px) {
   .homePage {
     @include backgroundImage("../../assets/home/background-home-desktop.jpg");
-    padding-top: 2rem;
+    grid-template-rows: 15vh 85vh;
+    align-items: center;
 
     &__subSection {
 
-      height: 75%;
       display: grid;
       grid-template-columns: 2fr 1fr;
-      align-items: flex-end;
+      grid-template-rows: auto;
+      align-items: center;
 
       > main {
         padding-left: 8rem;
         margin: 0;
+        justify-self: start;
 
         > p {
           font-size: $lg-bodyText;
@@ -81,8 +102,13 @@
 
       }
 
-      .circle {
-        margin: 0 0 0 2rem;
+      .btnHolder {
+        align-items: flex-end;
+
+        .circle {
+          margin: 0 0 0 2rem;
+          @include btnSize(17rem, 17rem);
+        }
       }
       
     }

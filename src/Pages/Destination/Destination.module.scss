@@ -1,7 +1,7 @@
 @use "../../Sass/Abstracts/" as *;
 
 .mainContainer {
-  height: 80%;
+  height: 100%;
 
   &__infoHolder {
     height: 75%;
@@ -112,10 +112,9 @@
 
 @media screen and (min-width: 1280px) {
   .mainContainer {
-    height: 70%;
     display: grid;
     grid-template-columns: 60% 40%;
-    align-items: end;
+    align-items: center;
 
     &__imgHolder {
         height: 70%;

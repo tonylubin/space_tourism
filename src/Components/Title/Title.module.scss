@@ -2,7 +2,7 @@
 
 .title {
   text-align: center;
-  margin: 2rem auto;
+  padding-top: 4rem;
 
   > p {
     @include secondaryText;
@@ -19,6 +19,7 @@
 @media screen and (min-width: 768px) {
   .title {
     margin: 0;
+    padding-top: 6rem;
 
     > h1 {
       font-size: $md-homeHeading;

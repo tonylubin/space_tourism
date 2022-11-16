@@ -23,14 +23,16 @@ const Home = () => {
             you a truly out of this world experience!
           </p>
         </main>
-        <button
-          className={`${styles.circle} ${isHovering ? styles.circleHover : ""}`}
-          onMouseOver={handleHoverStyle}
-          onMouseOut={handleHoverStyle}
-          onClick={() => navigate("/destinations")}
-        >
-          EXPLORE
-        </button>
+        <div className={styles.btnHolder}>
+          <button
+            className={`${styles.circle} ${isHovering ? styles.circleHover : ""}`}
+            onMouseOver={handleHoverStyle}
+            onMouseOut={handleHoverStyle}
+            onClick={() => navigate("/destinations")}
+          >
+            EXPLORE
+          </button>
+        </div>
       </div>
     </div>
   );
